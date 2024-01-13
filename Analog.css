@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/Gear\ wheel.jpeg);
+  background-size: cover;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  background-image: url("img/bg-Analog.png");
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: inset 10px 10px 90px #000, inset -10px -10px 90px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #666;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.sec {
+  width: 230px;
+  height: 230px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.sec::before {
+  content: "";
+  width: 2px;
+  height: 140px;
+  background-color: red;
+  z-index: 3;
+  border-radius: 20px;
+  right: 173px;
+}
+
+.min {
+  width: 230px;
+  height: 220px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.min::before {
+  content: "";
+  width: 6px;
+  height: 110px;
+  background-color: #000;
+  z-index: 2;
+  border-radius: 30%;
+}
+
+.hour {
+  width: 230px;
+  height: 170px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.hour::before {
+  content: "";
+  width: 14px;
+  height: 110px;
+  background-color: #000;
+  z-index: 1;
+  border-radius: 50%;
+}
